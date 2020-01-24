@@ -105,5 +105,13 @@ namespace Cliente_Asociados_CA
             dt = s.socioTab;
             dgvSocio.DataSource = dt;
         }
+        void cargarDatos()
+        {
+            //aqui se cargaran datos
+        }
+        void cargarCosas()
+        {
+
+        }
     }
 }
