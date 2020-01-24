@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarSocio));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,8 +88,8 @@
             this.btnBuscarPorNombre = new System.Windows.Forms.Button();
             this.txtBuscarNombreSocio = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -208,6 +208,7 @@
             this.pictureImage.Location = new System.Drawing.Point(1008, 12);
             this.pictureImage.Name = "pictureImage";
             this.pictureImage.Size = new System.Drawing.Size(99, 102);
+            this.pictureImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureImage.TabIndex = 23;
             this.pictureImage.TabStop = false;
             // 
@@ -552,7 +553,7 @@
             // txtCalle
             // 
             this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalle.Location = new System.Drawing.Point(264, 37);
+            this.txtCalle.Location = new System.Drawing.Point(264, 80);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(184, 24);
             this.txtCalle.TabIndex = 34;
@@ -560,7 +561,7 @@
             // txtColonia
             // 
             this.txtColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColonia.Location = new System.Drawing.Point(264, 78);
+            this.txtColonia.Location = new System.Drawing.Point(264, 35);
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(184, 24);
             this.txtColonia.TabIndex = 33;
@@ -582,22 +583,23 @@
             this.cmbEstado.Size = new System.Drawing.Size(161, 21);
             this.cmbEstado.TabIndex = 30;
             this.cmbEstado.Text = "--- Estado ---";
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(264, 62);
+            this.label15.Location = new System.Drawing.Point(264, 17);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 15);
+            this.label15.Size = new System.Drawing.Size(68, 15);
             this.label15.TabIndex = 25;
-            this.label15.Text = "Colonia: ";
+            this.label15.Text = "Localidad: ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(264, 19);
+            this.label14.Location = new System.Drawing.Point(264, 62);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 15);
             this.label14.TabIndex = 24;
@@ -613,14 +615,15 @@
             this.dgvSocio.Location = new System.Drawing.Point(10, 380);
             this.dgvSocio.Name = "dgvSocio";
             this.dgvSocio.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvSocio.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSocio.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSocio.Size = new System.Drawing.Size(1129, 305);
             this.dgvSocio.TabIndex = 30;
+            this.dgvSocio.DoubleClick += new System.EventHandler(this.dgvSocio_DoubleClick);
             // 
             // panel4
             // 
@@ -767,14 +770,6 @@
             this.panel6.Size = new System.Drawing.Size(138, 113);
             this.panel6.TabIndex = 45;
             // 
-            // cmbStatus
-            // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(4, 33);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(129, 21);
-            this.cmbStatus.TabIndex = 26;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -784,6 +779,17 @@
             this.label23.Size = new System.Drawing.Size(47, 15);
             this.label23.TabIndex = 27;
             this.label23.Text = "Status:";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "ACTIVO(VIVO)",
+            "INACTIVO(FALLECIDO)"});
+            this.cmbStatus.Location = new System.Drawing.Point(4, 33);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(129, 21);
+            this.cmbStatus.TabIndex = 26;
             // 
             // FrmAgregarSocio
             // 
