@@ -609,9 +609,9 @@
             // 
             this.dgvSocio.AllowUserToAddRows = false;
             this.dgvSocio.AllowUserToDeleteRows = false;
-            this.dgvSocio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.dgvSocio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSocio.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgvSocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSocio.GridColor = System.Drawing.SystemColors.Info;
             this.dgvSocio.Location = new System.Drawing.Point(10, 380);
             this.dgvSocio.Name = "dgvSocio";
             this.dgvSocio.ReadOnly = true;

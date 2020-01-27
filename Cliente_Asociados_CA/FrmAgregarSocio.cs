@@ -142,7 +142,7 @@ namespace Cliente_Asociados_CA
             cargarComboMunicipios();
         }
 
-        const string MySqlConnecionString = "Server=192.168.0.125; Database=asociadosbd; Username=root; Password=1290;";
+        const string MySqlConnecionString = "Server=192.168.1.2; Database=asociadosbd; Username=jubiladoUser; Password=1234;";
 
         static MySqlConnection GetNewConnection()
         {
